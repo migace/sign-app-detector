@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign-detector</title>
+  </head>
+  <body>
+    <header class="bg-gray-800 h-12">
+      <div class="container mx-auto px-4 flex items-center h-full">
+        <h1 class="text-white">sign-detector-app</h1>
+      </div>
+    </header>
+    <main>        
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl text-center my-4">Draw a positive sign</h2>
+            <div class="flex space-x-4 justify-center">
+                <drawable-box id="positive-one"></drawable-box>
+                <drawable-box id="positive-two"></drawable-box>
+                <drawable-box id="positive-three"></drawable-box>
+            </div>
+            <h2 class="text-2xl text-center my-4">Draw a negative sign</h2>
+            <div class="flex space-x-4 justify-center">
+                <drawable-box id="negative-one"></drawable-box>
+                <drawable-box id="negative-two"></drawable-box>
+                <drawable-box id="negative-three"></drawable-box>
+            </div>
+            <div class="flex space-x-4 justify-center py-10 items-center">
+                <div class="flex flex-col justify-end items-center relative" style="width: 160px; height: 160px;">
+                    <button disabled id="train" class="bg-purple-600 bg-opacity-75 py-2 px-4 text-white disabled:opacity-50 absolute top-0 left-1/2 transform -translate-x-1/2">Train</button>
+                    <div id="result-net-wrapper" class="hidden">
+                      <p>Result</p>
+                      <p id="result-net"></p>
+                    </div>
+                </div>
+                <drawable-box reset id="custom"></drawable-box>
+                <div class="flex flex-col justify-end items-center relative" style="width: 160px; height: 160px;">
+                    <button id="reset" class="bg-purple-600 bg-opacity-75 py-2 px-4 text-white disabled:opacity-50 absolute top-0 left-0">Reset</button>
+                    <button disabled id="guess" class="bg-purple-600 bg-opacity-75 py-2 px-4 text-white disabled:opacity-50 absolute top-0 right-0">Guess</button>
+                    <div id="result-wrapper" class="hidden">
+                      <p id="result"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

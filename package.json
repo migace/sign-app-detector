@@ -1,0 +1,24 @@
+{
+  "name": "sign-detector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "parcel": "^2.0.0-rc.0",
+    "postcss": "^8.3.9",
+    "tailwindcss": "^2.2.16"
+  },
+  "dependencies": {
+    "brain.js": "^2.0.0-beta.3",
+    "lit-element": "^3.0.1",
+    "lit-element-state": "^1.7.0"
+  }
+}
